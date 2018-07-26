@@ -1,0 +1,24 @@
+<h1>Gaze upon on all these journal entries </h1>
+
+<form>
+<h3> Add A New Entry</h3>
+
+<label>Title</label>
+<input [(ngModel)]="theNewEntry.title" name="blah" type="text">
+
+<label>Content</label>
+<textarea [(ngModel)]="theNewEntry.content" njame="blah" cols="30"
+
+
+</form>
+  
+  <div *ngFor=" let oneEntry of entries">
+
+    <h3>{{oneEntry.title}}</h3>
+    <p>{{oneEntry.content}}</p>
+    <a [routerLink]="['entries', oneEntry.id]">See Details</a>
+  
+    </div>
+  
+  
+
